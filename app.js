@@ -25,8 +25,8 @@ button.addEventListener('click', (e) => {
 	var cuotaAnualFormateada = (cuotaMensual*tiempo).toLocaleString("en-US", { style: "currency", currency: "USD" });
 
 
-	document.querySelector('h1').innerHTML = 'RD$ ' + cuotaFormtaeada;
-	document.querySelector('h3').innerHTML = 'RD$ ' + cuotaAnualFormateada;
+	document.querySelector('h1').innerHTML = 'RD ' + cuotaFormtaeada;
+	document.querySelector('h3').innerHTML = 'RD ' + cuotaAnualFormateada;
 
 });
 
