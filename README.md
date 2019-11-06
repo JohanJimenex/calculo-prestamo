@@ -43,7 +43,7 @@ Calculadora de cuota mensual de un préstamo, utilizando el método `.toLocalStr
                 <input id='tiempo' type='number' placeholder='Cantidad de meses' required>
                 <button>Calcular</button>
             </form>
-        </div>>	
+        </div>
     </div>
     <script src='app.js'></script>
 </body>
