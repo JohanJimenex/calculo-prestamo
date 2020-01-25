@@ -30,6 +30,12 @@ button.addEventListener('click', (e) => {
 
 });
 
+
+
+
+
+
+
 tema.addEventListener('click', (e) => {
 	e.preventDefault()
 
