@@ -1,0 +1,22 @@
+h1, h3 {
+	width: auto;
+	margin: auto;
+	max-width: 500px;
+}
+
+input {
+	text-align: center;
+	padding: 15px;
+	border: 1px solid gray;
+	border-radius: 4px;
+	font-size: 18px;
+	margin: 2px;
+}
+
+input:hover {
+	background: pink;
+}
+
+p{
+	font-size: 20px;
+}

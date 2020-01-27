@@ -1,38 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel='stylesheet' href='misestilos.css'>
-    <title>Document</title>
-</head>
-<body>
-    <div class='container'>
-        <div class='pa'>
-            <h4>Cuota Mensual</h4>
-            <h1>RD$ 0.00</h1>
-            <h4>Monto total a pagar al finalizar préstamo</h4>
-            <h3>RD$ 0.00</h3>
-        </div>
-        <div id='caja'>
+    <link rel='stylesheet' href='css/misestilos.css'>
+    <script src='javascript/app.js' defer></script>
+    <!-- Bootstrap -->
+    <link rel='stylesheet' href='css/bootstrap.css'>
+    <script src='javascript/jquery.js'></script>
+    <script src='javascript/bootstrap.js'></script>
+    <script src='javascript/popper.js'></script>
 
-            <div id='tema'>
-                <div id='tomato' class='bt'></div>
-                <div id='dodgerblue' class='bt'></div>
-                <div id='green' class='bt'></div>
-                <div id='black' class='bt'></div>
+
+    <title>Document</title>
+
+</head>
+
+<body class="bg-dark">
+
+    <div class='container-fluid text-center bg-dark'>
+
+        <div class='container-fluid my-3 py-3 bg-white rounded'>
+            <h4>Cuota Mensual:</h4>
+            <h1 class="bg-warning rounded-pill">$ 0.00</h1>
+            <h4>Monto total a pagar al finalizar préstamo:</h4>
+            <h3 class="bg-info rounded text-white">$ 0.00</h3>
+        </div>
+
+
+
+        <section class="container bg-dark p-4 rounded ">
+
+            <p class="text-white">Ingrese los datos</p>
+
+            <div class="row">
+                <div class="col-md-4 my-1">
+                    <input id="monto" type="number" class="form-control form-control-lg"
+                        placeholder="Monto del préstamo">
+                </div>
+                <div class="col-md-4 my-1">
+                    <input id="tasa" type="number" class="form-control form-control-lg"
+                        placeholder="Tasa de porcentaje anual %">
+                </div>
+                <div class="col-md-4 my-1">
+                    <input id="tiempo" type="number" class="form-control form-control-lg"
+                        placeholder="Cantidad de meses">
+                </div>
             </div>
 
-            <form id='formulario'>
-                <input id='monto' type='number' placeholder='Monto del prestamo' required>
-                <input id='tasa' type='number' placeholder='Tasa anual' required>
-                <input id='tiempo' type='number' placeholder='Cantidad de meses' required>
-                <button>Calcular</button>
-            </form>
-        </div>
-    </div>
-    <script src='app.js'></script>
-</body>
-</html>
+            <div id="boton" class="col-md-12 my-1">
+                <button class="btn btn-primary btn-lg mx-auto ">Calcular</button>
+            </div>
+        </section>
 
+        
+        <div>
+            <br>
+            <h2 class="text-white">Tabla de amortización</h2> 
+        </div>
+
+        <table class="table bg-light container rounded">
+            <thead>
+                <tr>
+                    <th scope="col">Pago</th>
+                    <th scope="col">Cuota</th>
+                    <th scope="col">Interes</th>
+                    <th scope="col">Capital</th>
+                    <th scope="col">Balance</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+
+    </div>
+
+</body>
+
+</html>
