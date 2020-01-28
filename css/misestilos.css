@@ -6,17 +6,13 @@ h1, h3 {
 
 input {
 	text-align: center;
-	padding: 15px;
-	border: 1px solid gray;
-	border-radius: 4px;
-	font-size: 18px;
-	margin: 2px;
+	font-size: 12px !important;
 }
 
 input:hover {
 	background: pink;
 }
 
-p{
+p {
 	font-size: 20px;
 }
