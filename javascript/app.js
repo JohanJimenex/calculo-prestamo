@@ -37,7 +37,7 @@ button.addEventListener('click', (e) => {
 
 
 		var interes = saldoInicial * tasa / 100;
-		var capital = cuotaMensual - interes;
+		capital = cuotaMensual - interes;
 		var balance = saldoInicial - capital;
 
 		tBody.innerHTML += `
@@ -56,14 +56,13 @@ button.addEventListener('click', (e) => {
 
 
 
-	if (monto == "" || tasa == "" || tiempo == "") {
+	if (monto == "" || tasa == "" || tiempo != Number) {
 
 		document.querySelector("p").innerHTML = "<div class='btn alert-danger'> Debe llenar todos los campos </div>"
 
 		setTimeout(() => {
 			document.querySelector("p").innerHTML = "Llene todos los campos"
 		}, 3000);
-
 
 	} else {
 		document.querySelector('h1').innerHTML = cuotaFormtaeada;

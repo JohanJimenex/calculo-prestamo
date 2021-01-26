@@ -14,7 +14,6 @@
     <script src='javascript/bootstrap.js'></script>
     <script src='javascript/popper.js'></script>
 
-
     <title>Document</title>
 
 </head>
@@ -25,7 +24,7 @@
 
         <div class='container my-3 py-3 bg-dark text-white rounded'>
             <h4>Cuota Mensual:</h4>
-            <h1 class="bg-warning rounded-pill">$ 0.00</h1>
+            <h1 class="bg-primary rounded-pill">$ 0.00</h1>
             <h4>Monto total a pagar al finalizar préstamo:</h4>
             <h3 class="rounded ">$ 0.00</h3>
         </div>
@@ -44,8 +43,17 @@
                         placeholder="Tasa de porcentaje anual %">
                 </div>
                 <div class="col-md-4 my-1">
-                    <input id="tiempo" type="number" class="form-control form-control-lg"
-                        placeholder="Plazo (en meses)">
+                    <select id="tiempo" class="form-control form-control-lg">
+                        <option value="Seleccionar...">Seleccionar...</option>
+                        <option value="6">6 Meses</option>
+                        <option value="12">12 Meses</option>
+                        <option value="18">18 Meses</option>
+                        <option value="24">24 Meses</option>
+                        <option value="36">36 Meses</option>
+                        <option value="48">48 Meses</option>
+                        <option value="60">60 Meses</option>
+                    </select>
+                    <!-- <input id="tiempo" type="number" class="form-control form-control-lg" placeholder="Plazo (en meses)"> -->
                 </div>
             </div>
 
@@ -60,7 +68,7 @@
             <h2 class="text-white">Tabla de amortización</h2>
         </div>
 
-        <table class="table table-striped bg-light table-hover table-responsive-md">
+        <table class="table table-striped bg-light table-hover table-responsive-md" >
             <thead>
                 <tr>
                     <th scope="col">Pago</th>
