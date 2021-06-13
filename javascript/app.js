@@ -2,12 +2,13 @@
 
 var button = document.querySelector('button');
 var tema = document.querySelector('#tema');
+var tBody = document.querySelector("tbody");
+
 var monto;
 var capital;
 var tasa;
 var tiempo;
 var cuotaMensual;
-var tBody = document.querySelector("tbody");
 
 button.addEventListener('click', (e) => {
 	e.preventDefault()
@@ -18,14 +19,7 @@ button.addEventListener('click', (e) => {
 	var saldoInicial = monto;
 
 
-	cuotaMensual = monto * (
-		(Math.pow((1 + tasa / 100), tiempo) *
-			(tasa / 100)
-		) /
-		(Math.pow((1 + tasa / 100), tiempo)
-			- 1
-		)
-	);
+	cuotaMensual = monto * ((Math.pow((1 + tasa / 100), tiempo) * (tasa / 100)) / (Math.pow((1 + tasa / 100), tiempo) - 1));
 
 	//Dar formato con comas y decimales
 	//Nota: primero se deben hacer las operaciones matematicas deseadas antes de utilizar el metodo 'toLocalString()'
@@ -35,28 +29,25 @@ button.addEventListener('click', (e) => {
 
 	for (var i = 0; i < tiempo; i++) {
 
-
 		var interes = saldoInicial * tasa / 100;
 		capital = cuotaMensual - interes;
 		var balance = saldoInicial - capital;
 
 		tBody.innerHTML += `
 			<tr>
-                <th scope="row">${i + 1}</th>
+				<th scope="row">${i + 1}</th>
 				<td>${cuotaFormtaeada}</td>
-                <td>${(interes).toLocaleString("en-US", { style: "currency", currency: "USD" })}</td>
-                <td>${(capital).toLocaleString("en-US", { style: "currency", currency: "USD" })}</td>
-                <td>${(balance).toLocaleString("en-US", { style: "currency", currency: "USD" })}</td>
+					<td>${(interes).toLocaleString("en-US", { style: "currency", currency: "USD" })}</td>
+					<td>${(capital).toLocaleString("en-US", { style: "currency", currency: "USD" })}</td>
+					<td>${(balance).toLocaleString("en-US", { style: "currency", currency: "USD" })}</td>
 			</tr>	
-			
-			
 		`
 		saldoInicial = saldoInicial - capital;
 	}
 
 
 
-	if (monto == "" || tasa == "" || tiempo != Number) {
+	if (monto == "" || tasa == "" || isNaN(tiempo)) {
 
 		document.querySelector("p").innerHTML = "<div class='btn alert-danger'> Debe llenar todos los campos </div>"
 
