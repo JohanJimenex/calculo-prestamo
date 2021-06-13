@@ -1,1 +1,1 @@
-(balanceEnCuenta).toLocaleString("en-US", { style: "currency", currency: "USD" })
+// (balanceEnCuenta).toLocaleString("en-US", { style: "currency", currency: "USD" })
